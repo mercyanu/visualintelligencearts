@@ -1,0 +1,135 @@
+html {
+    width: 100%
+}
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 10px;
+    background: purple;
+}
+a{
+    text-decoration: none;
+}
+
+.logo-text{
+    background: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 37px;
+}
+.thumb-title{
+    margin: 0;
+    padding: 4px 10px;
+    background: rgb(96, 125, 139);
+    color: rgb(202, 238, 255);
+    font-size: 18px;
+}
+
+.thumb-image {
+    display: block;
+    width: 100%;
+}
+.thumb-item{
+    display: inline-block; 
+    min-width:120px;
+    max-width: 120px;
+    border: 1px solid rgb(100%, 100%, 100%);
+border: 3px solid rgba(100%, 100%, 100%, 0.8);
+}
+/*
+This style will be applied to the item that has a thumbnail preceeding it i.e the 2nd to the last item
+.thumb-item + .thumb-item{
+    margin-top: 20px;
+}
+*/
+
+.thumb-list{
+    display: flex;
+    flex: 0 1 auto;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    order: 2;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.detail-image-container{
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+} 
+
+.detail-image{
+    width: 90%;
+}
+
+.detail-image-frame{
+    text-align: center;
+    position: relative;
+}
+
+.detail-image-title{
+    position: absolute;
+    bottom: -17px;
+    left: 4px;
+    color: white;
+    font-size: 40px;
+    text-shadow: rgba(250,130,45,.9) 3px 3px 9px;
+}
+
+.main-header{
+    flex: 0 1 auto;
+}
+
+.main-content{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media all and (min-width:768px){
+    .main-content{
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .thumb-list{
+
+        flex-direction: column;
+        order: 0;
+        margin-left: 20px;
+
+    }
+    
+    .thumb-item{
+        max-width: 260px;
+    }
+    
+    .thumb-item + .thumb-item{
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
